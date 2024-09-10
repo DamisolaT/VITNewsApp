@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:vit_news_app/discover_page.dart';
 import 'package:vit_news_app/home_view.dart';
+import 'package:vit_news_app/news_details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,7 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int currentindex=0;
-  final  screens = [HomeView(), DiscoverPage()];
+  final  screens = [HomeView(), DiscoverPage(), NewsDetailPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           items: [
         BottomNavigationBarItem(backgroundColor: Colors.white, icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(backgroundColor: Colors.white,icon: Icon(Icons.not_interested_outlined), label: 'Globe'),
-        BottomNavigationBarItem(backgroundColor: Colors.white,icon: Icon(Icons.panorama_vertical_sharp), label: 'Shape'),
+        BottomNavigationBarItem(backgroundColor: Colors.white,icon: Icon(Icons.panorama_vertical_sharp), label: 'News'),
         BottomNavigationBarItem(backgroundColor: Colors.white,icon: Icon(Icons.person), label: 'Profile'),
 
       ]),
